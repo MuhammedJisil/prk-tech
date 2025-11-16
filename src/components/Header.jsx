@@ -19,7 +19,6 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Services', hasDropdown: true },
-    { name: 'Portfolio', path: '/portfolio' },
     { name: 'Careers', path: '/careers' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact Us', path: '/contact' }
@@ -62,7 +61,7 @@ const Header = () => {
             <img
               src="/prk-logo.png"
               alt="PRK TECH Logo"
-              className="h-15 w-auto"
+              className="h-20 w-auto"
               onError={(e) => {
                 e.target.src =
                   'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60"><rect width="180" height="60" fill="white"/><text x="10" y="35" fill="%23FF8C00" font-family="Arial" font-size="28" font-weight="bold">PRK</text><text x="90" y="35" fill="%231a1f71" font-family="Arial" font-size="28" font-weight="bold">TECH</text></svg>';

@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 // Navigation pages
 import Home from "./components/Navigation/Home";
 import AboutUs from "./components/Navigation/AboutUs";
-import Portfolio from "./components/Navigation/Portfolio";
 import Plugins from "./components/Navigation/Plugins";
 import Careers from "./components/Navigation/Careers";
 import Blog from "./components/Navigation/Blog";
@@ -28,7 +27,6 @@ function App() {
           {/* Navigation Pages */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/plugins" element={<Plugins />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />

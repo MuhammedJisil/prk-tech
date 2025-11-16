@@ -59,7 +59,7 @@ function Home() {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <Title>Home | PRK</Title>
+      <Title>PRK TECH</Title>
       <Meta
         name="description"
         content="Learn more about PRK and our expertise."
@@ -89,7 +89,7 @@ function Home() {
             {/* Main Heading */}
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              style={{ fontFamily: "Sigmar One, sans-serif" }}
             >
               <span className="text-white drop-shadow-lg">
                 Transforming Ideas
@@ -103,7 +103,7 @@ function Home() {
             {/* Animated Services Text */}
             <div
               className="flex flex-wrap items-center gap-2 text-xl sm:text-2xl lg:text-3xl font-bold"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              style={{ fontFamily: "Sigmar One, sans-serif" }}
             >
               <span className="text-white drop-shadow-lg">
                 We Specialize in
@@ -114,7 +114,7 @@ function Home() {
                     <div
                       key={index}
                       className="h-10 sm:h-12 lg:h-14 flex items-center font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent drop-shadow-lg"
-                      style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                      style={{ fontFamily: "Sigmar One, sans-serif" }}
                     >
                       {service}
                     </div>
@@ -126,7 +126,7 @@ function Home() {
             {/* Description */}
             <p
               className="max-w-2xl text-base sm:text-lg text-white leading-relaxed font-medium drop-shadow-md"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              style={{ fontFamily: "Sigmar One, sans-serif" }}
             >
               From innovative creative solutions to cutting-edge software
               development, we deliver excellence in every project. Let's build
@@ -137,7 +137,7 @@ function Home() {
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
               <button
                 className="group relative px-7 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40 text-base"
-                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                style={{ fontFamily: "Sigmar One, sans-serif" }}
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started
@@ -148,7 +148,7 @@ function Home() {
 
               <button
                 className="px-7 py-3 bg-white border-2 border-blue-900 text-blue-900 font-bold rounded-full hover:bg-blue-900 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
-                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                style={{ fontFamily: "Sigmar One, sans-serif" }}
               >
                 About Us
               </button>
@@ -164,7 +164,7 @@ function Home() {
           <div className="text-center mb-16">
             <h2
               className="text-4xl sm:text-5xl font-normal mb-4"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              style={{ fontFamily: "Sigmar One, sans-serif" }}
             >
               <span className="text-blue-900">Our </span>
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
@@ -363,7 +363,7 @@ function Home() {
           <div className="text-center mb-16">
             <h2
               className="text-4xl sm:text-5xl font-normal mb-4"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              style={{ fontFamily: "Sigmar One, sans-serif" }}
             >
               <span className="text-blue-900">Why Partner </span>
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
@@ -402,7 +402,7 @@ function Home() {
           <div className="text-center mt-16">
             <button
               className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40 text-lg"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              style={{ fontFamily: "Sigmar One, sans-serif" }}
             >
               <span className="relative z-10 flex items-center gap-2">
                 Start Your Journey
@@ -415,7 +415,7 @@ function Home() {
       </section>
 
       <style>{`
-       @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Text:wght@200..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Open+Sans:wght@400;500;600;700&display=swap');
 
         @keyframes slide-up {
           0%, 25% {
