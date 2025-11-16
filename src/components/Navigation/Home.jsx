@@ -73,13 +73,13 @@ function Home() {
             alt="Technology Background"
             className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-orange-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-950/70 via-blue-900/60 to-yellow-900/70" />
         </div>
 
         {/* Floating particles effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute w-96 h-96 bg-blue-300/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse" />
-          <div className="absolute w-96 h-96 bg-orange-300/25 rounded-full blur-3xl top-1/2 right-0 animate-pulse delay-1000" />
+          <div className="absolute w-96 h-96 bg-blue-400/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse" />
+          <div className="absolute w-96 h-96 bg-yellow-400/25 rounded-full blur-3xl top-1/2 right-0 animate-pulse delay-1000" />
           <div className="absolute w-96 h-96 bg-blue-300/15 rounded-full blur-3xl bottom-0 left-1/3 animate-pulse delay-2000" />
         </div>
 
@@ -89,13 +89,13 @@ function Home() {
             {/* Main Heading */}
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
-              style={{ fontFamily: "Sigmar One, sans-serif" }}
+              style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
               <span className="text-white drop-shadow-lg">
                 Transforming Ideas
               </span>
               <br />
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg">
                 into Digital Realities
               </span>
             </h1>
@@ -103,7 +103,7 @@ function Home() {
             {/* Animated Services Text */}
             <div
               className="flex flex-wrap items-center gap-2 text-xl sm:text-2xl lg:text-3xl font-bold"
-              style={{ fontFamily: "Sigmar One, sans-serif" }}
+              style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
               <span className="text-white drop-shadow-lg">
                 We Specialize in
@@ -113,8 +113,8 @@ function Home() {
                   {services.map((service, index) => (
                     <div
                       key={index}
-                      className="h-10 sm:h-12 lg:h-14 flex items-center font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent drop-shadow-lg"
-                      style={{ fontFamily: "Sigmar One, sans-serif" }}
+                      className="h-10 sm:h-12 lg:h-14 flex items-center font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg"
+                      style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
                     >
                       {service}
                     </div>
@@ -126,7 +126,7 @@ function Home() {
             {/* Description */}
             <p
               className="max-w-2xl text-base sm:text-lg text-white leading-relaxed font-medium drop-shadow-md"
-              style={{ fontFamily: "Sigmar One, sans-serif" }}
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
               From innovative creative solutions to cutting-edge software
               development, we deliver excellence in every project. Let's build
@@ -136,19 +136,19 @@ function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
               <button
-                className="group relative px-7 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40 text-base"
-                style={{ fontFamily: "Sigmar One, sans-serif" }}
+                className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base"
+                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
 
               <button
-                className="px-7 py-3 bg-white border-2 border-blue-900 text-blue-900 font-bold rounded-full hover:bg-blue-900 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
-                style={{ fontFamily: "Sigmar One, sans-serif" }}
+                className="px-7 py-3 bg-white border-2 border-blue-950 text-blue-950 font-bold rounded-full hover:bg-blue-950 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
+                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
               >
                 About Us
               </button>
@@ -164,14 +164,14 @@ function Home() {
           <div className="text-center mb-16">
             <h2
               className="text-4xl sm:text-5xl font-normal mb-4"
-              style={{ fontFamily: "Sigmar One, sans-serif" }}
+              style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
-              <span className="text-blue-900">Our </span>
-              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="text-blue-950">Our </span>
+              <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
                 Services
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
               Comprehensive digital solutions tailored to elevate your business
               and drive meaningful results
             </p>
@@ -180,12 +180,12 @@ function Home() {
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Creative Communications */}
-            <div className="group relative bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200/30 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
+            <div className="group relative bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-200/30 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-8 h-8 text-white"
+                    className="w-8 h-8 text-blue-950"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -198,25 +198,25 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
                   Creative Communications
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   Strategic brand messaging and creative content that resonates
                   with your audience. We craft compelling narratives across all
                   platforms.
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">✓</span>
+                    <span className="text-yellow-500 mt-1">✓</span>
                     <span>Brand Strategy & Identity</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">✓</span>
+                    <span className="text-yellow-500 mt-1">✓</span>
                     <span>Content Creation & Copywriting</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">✓</span>
+                    <span className="text-yellow-500 mt-1">✓</span>
                     <span>Social Media Management</span>
                   </li>
                 </ul>
@@ -224,12 +224,12 @@ function Home() {
             </div>
 
             {/* Web Solutions */}
-            <div className="group relative bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <div className="group relative bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/30 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-900 to-blue-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-8 h-8 text-white"
+                    className="w-8 h-8 text-yellow-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -242,25 +242,25 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
                   Web Solutions
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   Modern, responsive websites designed for optimal user
                   experience and business growth. Built with the latest
                   technologies.
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-500 mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>Custom Website Design & Development</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-500 mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>E-commerce Platforms</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-500 mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>Website Maintenance & Support</span>
                   </li>
                 </ul>
@@ -268,12 +268,12 @@ function Home() {
             </div>
 
             {/* Digital Marketing */}
-            <div className="group relative bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200/30 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
+            <div className="group relative bg-gradient-to-br from-yellow-50 to-blue-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-200/30 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-8 h-8 text-white"
+                    className="w-8 h-8 text-blue-950"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -286,24 +286,24 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
                   Digital Marketing
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   Data-driven marketing strategies that increase visibility,
                   drive traffic, and convert leads into loyal customers.
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">✓</span>
+                    <span className="text-yellow-500 mt-1">✓</span>
                     <span>SEO & Search Marketing</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">✓</span>
+                    <span className="text-yellow-500 mt-1">✓</span>
                     <span>Pay-Per-Click Advertising</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">✓</span>
+                    <span className="text-yellow-500 mt-1">✓</span>
                     <span>Email Marketing Campaigns</span>
                   </li>
                 </ul>
@@ -311,12 +311,12 @@ function Home() {
             </div>
 
             {/* Software Development */}
-            <div className="group relative bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <div className="group relative bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:shadow-2xl">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/30 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-900 to-blue-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-8 h-8 text-white"
+                    className="w-8 h-8 text-yellow-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -329,24 +329,24 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
                   Software Development
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   Custom software solutions that streamline operations and solve
                   complex business challenges with scalable technology.
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-500 mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>Custom Application Development</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-500 mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>Mobile App Development</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-500 mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>API Integration & Development</span>
                   </li>
                 </ul>
@@ -363,14 +363,14 @@ function Home() {
           <div className="text-center mb-16">
             <h2
               className="text-4xl sm:text-5xl font-normal mb-4"
-              style={{ fontFamily: "Sigmar One, sans-serif" }}
+              style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
-              <span className="text-blue-900">Why Partner </span>
-              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="text-blue-950">Why Partner </span>
+              <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
                 With Us?
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
               Looking for a powerful digital presence? We've empowered thousands
               of businesses since 2012 with proven web design, development, and
               digital marketing solutions. Let's accelerate your growth
@@ -383,15 +383,15 @@ function Home() {
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-orange-300"
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-yellow-300"
               >
-                <div className="text-orange-500 mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-yellow-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-3">
+                <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
                   {item.description}
                 </p>
               </div>
@@ -401,21 +401,21 @@ function Home() {
           {/* CTA at the bottom of section */}
           <div className="text-center mt-16">
             <button
-              className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40 text-lg"
-              style={{ fontFamily: "Sigmar One, sans-serif" }}
+              className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-lg"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
               <span className="relative z-10 flex items-center gap-2">
                 Start Your Journey
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
           </div>
         </div>
       </section>
 
       <style>{`
-      @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Open+Sans:wght@400;500;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Text:wght@200..700&display=swap');
 
         @keyframes slide-up {
           0%, 25% {
