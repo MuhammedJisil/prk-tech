@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 // Navigation pages
 import Home from "./components/Navigation/Home";
 import AboutUs from "./components/Navigation/AboutUs";
 import Careers from "./components/Navigation/Careers";
-import Blog from "./components/Navigation/Blog";
 import ContactUs from "./components/Navigation/ContactUs";
 
 //service pages
@@ -23,13 +23,13 @@ function App() {
     <Router>
       <Header />
        <ScrollToTop />
+       <ScrollToTopButton />
       <main className="pt-20">
         <Routes>
           {/* Navigation Pages */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<ContactUs />} />
 
           {/* Service Pages */}

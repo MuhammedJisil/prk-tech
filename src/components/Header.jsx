@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -8,7 +8,6 @@ const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const dropdownRef = useRef(null);
   const hoverTimeoutRef = useRef(null);
 
   const services = [
@@ -23,24 +22,8 @@ const Header = () => {
     { name: "About Us", path: "/about" },
     { name: "Services", hasDropdown: true },
     { name: "Careers", path: "/careers" },
-    { name: "Blog", path: "/blog" },
     { name: "Contact Us", path: "/contact" }
   ];
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setActiveDropdown(null);
-      }
-    };
-
-    if (activeDropdown) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [activeDropdown]);
 
   const handleMouseEnter = (itemName) => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
@@ -89,7 +72,6 @@ const Header = () => {
                 <div
                   key={item.name}
                   className="relative"
-                  ref={item.hasDropdown ? dropdownRef : null}
                   onMouseEnter={() => item.hasDropdown && handleMouseEnter(item.name)}
                   onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
                 >
@@ -117,7 +99,7 @@ const Header = () => {
                                     to={service.path}
                                     className="block px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-200 text-blue-950 hover:bg-yellow-50 hover:text-yellow-600"
                                     style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-                                    onClick={closeMobileMenu}
+                                    onClick={() => setActiveDropdown(null)}
                                   >
                                     {service.name}
                                   </Link>
@@ -137,7 +119,6 @@ const Header = () => {
                           : "text-blue-950 hover:text-yellow-600 hover:bg-yellow-50"
                       }`}
                       style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-                      onClick={closeMobileMenu}
                     >
                       {item.name}
                     </Link>
@@ -180,7 +161,11 @@ const Header = () => {
                           />
                         </button>
 
-                        {activeDropdown === item.name && (
+                        <div
+                          className={`overflow-hidden transition-all duration-200 ${
+                            activeDropdown === item.name ? "max-h-96" : "max-h-0"
+                          }`}
+                        >
                           <div className="bg-gradient-to-br from-yellow-50 to-blue-50 px-4 py-3 rounded-lg mt-2">
                             <ul className="space-y-2">
                               {services.map((service) => (
@@ -197,7 +182,7 @@ const Header = () => {
                               ))}
                             </ul>
                           </div>
-                        )}
+                        </div>
                       </>
                     ) : (
                       <Link
