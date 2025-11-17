@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Title, Meta } from "react-head";
 import {
   Search,
   TrendingUp,
@@ -14,8 +15,9 @@ import {
   LineChart,
   Award,
   Rocket,
-  Globe
+  Globe,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function DigitalMarketing() {
   const services = [
@@ -27,87 +29,145 @@ function DigitalMarketing() {
     "Digital Marketing Services",
     "Data Analytics Services",
     "Ecommerce SEO Services",
-    "SEO Packages"
+    "SEO Packages",
   ];
 
   const offerings = [
     {
       icon: <Search className="w-12 h-12" />,
       title: "SEO Services",
-      description: "Boost your organic rankings and drive qualified traffic with our comprehensive SEO strategies.",
-      features: ["Keyword Research", "On-Page Optimization", "Link Building", "Technical SEO"]
+      description:
+        "Boost your organic rankings and drive qualified traffic with our comprehensive SEO strategies.",
+      features: [
+        "Keyword Research",
+        "On-Page Optimization",
+        "Link Building",
+        "Technical SEO",
+      ],
     },
     {
       icon: <Users className="w-12 h-12" />,
       title: "SMO Services",
-      description: "Amplify your brand presence across social media platforms with engaging content and strategies.",
-      features: ["Social Strategy", "Content Creation", "Community Management", "Performance Tracking"]
+      description:
+        "Amplify your brand presence across social media platforms with engaging content and strategies.",
+      features: [
+        "Social Strategy",
+        "Content Creation",
+        "Community Management",
+        "Performance Tracking",
+      ],
     },
     {
       icon: <MapPin className="w-12 h-12" />,
       title: "Local SEO Services",
-      description: "Dominate local search results and attract nearby customers to your business.",
-      features: ["Google My Business", "Local Citations", "Review Management", "Local Content"]
+      description:
+        "Dominate local search results and attract nearby customers to your business.",
+      features: [
+        "Google My Business",
+        "Local Citations",
+        "Review Management",
+        "Local Content",
+      ],
     },
     {
       icon: <Mouse className="w-12 h-12" />,
       title: "Google Ads Management",
-      description: "Maximize ROI with expertly managed PPC campaigns that target the right audience.",
-      features: ["Campaign Setup", "Keyword Bidding", "Ad Copy Optimization", "Conversion Tracking"]
+      description:
+        "Maximize ROI with expertly managed PPC campaigns that target the right audience.",
+      features: [
+        "Campaign Setup",
+        "Keyword Bidding",
+        "Ad Copy Optimization",
+        "Conversion Tracking",
+      ],
     },
     {
       icon: <Award className="w-12 h-12" />,
       title: "ORM Services",
-      description: "Protect and enhance your online reputation with proactive monitoring and management.",
-      features: ["Reputation Monitoring", "Review Management", "Crisis Response", "Brand Protection"]
+      description:
+        "Protect and enhance your online reputation with proactive monitoring and management.",
+      features: [
+        "Reputation Monitoring",
+        "Review Management",
+        "Crisis Response",
+        "Brand Protection",
+      ],
     },
     {
       icon: <Target className="w-12 h-12" />,
       title: "Digital Marketing Services",
-      description: "Comprehensive digital marketing solutions tailored to achieve your business goals.",
-      features: ["Strategy Development", "Multi-Channel Marketing", "Content Marketing", "Email Campaigns"]
+      description:
+        "Comprehensive digital marketing solutions tailored to achieve your business goals.",
+      features: [
+        "Strategy Development",
+        "Multi-Channel Marketing",
+        "Content Marketing",
+        "Email Campaigns",
+      ],
     },
     {
       icon: <BarChart3 className="w-12 h-12" />,
       title: "Data Analytics Services",
-      description: "Turn data into actionable insights with advanced analytics and reporting.",
-      features: ["Analytics Setup", "Performance Tracking", "Custom Reports", "Data Visualization"]
+      description:
+        "Turn data into actionable insights with advanced analytics and reporting.",
+      features: [
+        "Analytics Setup",
+        "Performance Tracking",
+        "Custom Reports",
+        "Data Visualization",
+      ],
     },
     {
       icon: <ShoppingBag className="w-12 h-12" />,
       title: "Ecommerce SEO Services",
-      description: "Drive more sales with SEO strategies specifically designed for online stores.",
-      features: ["Product Optimization", "Category Pages", "Schema Markup", "Shopping Feed"]
+      description:
+        "Drive more sales with SEO strategies specifically designed for online stores.",
+      features: [
+        "Product Optimization",
+        "Category Pages",
+        "Schema Markup",
+        "Shopping Feed",
+      ],
     },
     {
       icon: <Rocket className="w-12 h-12" />,
       title: "SEO Packages",
-      description: "Flexible SEO packages designed to fit businesses of all sizes and budgets.",
-      features: ["Starter Package", "Growth Package", "Enterprise Package", "Custom Solutions"]
-    }
+      description:
+        "Flexible SEO packages designed to fit businesses of all sizes and budgets.",
+      features: [
+        "Starter Package",
+        "Growth Package",
+        "Enterprise Package",
+        "Custom Solutions",
+      ],
+    },
   ];
 
   const benefits = [
     {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Increased Traffic",
-      description: "Drive more qualified visitors to your website through organic and paid channels."
+      description:
+        "Drive more qualified visitors to your website through organic and paid channels.",
     },
     {
       icon: <Target className="w-10 h-10" />,
       title: "Better Targeting",
-      description: "Reach the right audience at the right time with precision targeting strategies."
+      description:
+        "Reach the right audience at the right time with precision targeting strategies.",
     },
     {
       icon: <LineChart className="w-10 h-10" />,
       title: "Higher Conversions",
-      description: "Convert more visitors into customers with optimized campaigns and landing pages."
+      description:
+        "Convert more visitors into customers with optimized campaigns and landing pages.",
     },
     {
       icon: <Globe className="w-10 h-10" />,
       title: "Brand Visibility",
-      description: "Increase your brand presence across search engines and social media platforms."
-    }
+      description:
+        "Increase your brand presence across search engines and social media platforms.",
+    },
   ];
 
   const whyChooseUs = [
@@ -116,7 +176,7 @@ function DigitalMarketing() {
     "Transparent Reporting",
     "Dedicated Account Manager",
     "ROI-Focused Approach",
-    "Cutting-Edge Tools & Techniques"
+    "Cutting-Edge Tools & Techniques",
   ];
 
   const industries = [
@@ -127,17 +187,23 @@ function DigitalMarketing() {
     "Education",
     "Technology",
     "Hospitality",
-    "Retail"
+    "Retail",
   ];
 
   return (
     <div className="w-full overflow-x-hidden">
+      <Title>Digital Marketing | PRK TECH</Title>
+      <Meta
+        name="description"
+        content="Boost your online presence with PRK TECH’s data-driven digital marketing strategies, including SEO, social media, and paid campaigns."
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image with Low Opacity */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=2074&auto=format&fit=crop"
+            src="/digital_marketing-hero.png"
             alt="Digital Marketing"
             className="w-full h-full object-cover opacity-30"
           />
@@ -173,9 +239,7 @@ function DigitalMarketing() {
               className="flex flex-wrap items-center gap-2 text-xl sm:text-2xl lg:text-3xl font-bold"
               style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
-              <span className="text-white drop-shadow-lg">
-                Master in
-              </span>
+              <span className="text-white drop-shadow-lg">Master in</span>
               <div className="relative h-10 sm:h-12 lg:h-14 overflow-hidden min-w-[350px]">
                 <div className="animate-slide-up">
                   {services.map((service, index) => (
@@ -196,14 +260,16 @@ function DigitalMarketing() {
               className="max-w-2xl text-base sm:text-lg text-white leading-relaxed font-medium drop-shadow-md"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
-              From SEO to social media, PPC to analytics, we deliver integrated digital marketing 
-              strategies that increase visibility, drive traffic, and generate measurable results.
+              From SEO to social media, PPC to analytics, we deliver integrated
+              digital marketing strategies that increase visibility, drive
+              traffic, and generate measurable results.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-              <button
-                className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base"
+              <Link
+                to="/contact"
+                className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base inline-block"
                 style={{ fontFamily: "Stack Sans Text, sans-serif" }}
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -211,14 +277,7 @@ function DigitalMarketing() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
-
-              <button
-                className="px-7 py-3 bg-white border-2 border-blue-950 text-blue-950 font-bold rounded-full hover:bg-blue-950 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
-                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-              >
-                View Our Work
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -238,8 +297,12 @@ function DigitalMarketing() {
                 Services
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-              Comprehensive digital marketing solutions to elevate your online presence and drive business growth
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
+              Comprehensive digital marketing solutions to elevate your online
+              presence and drive business growth
             </p>
           </div>
 
@@ -255,15 +318,25 @@ function DigitalMarketing() {
                   <div className="text-yellow-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                  <h3
+                    className="text-xl font-bold text-blue-950 mb-3"
+                    style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                  >
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                  <p
+                    className="text-gray-700 leading-relaxed mb-4"
+                    style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                  >
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-gray-600"
+                        style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                      >
                         <CheckCircle className="w-4 h-4 text-yellow-500 mt-1 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </li>
@@ -289,7 +362,10 @@ function DigitalMarketing() {
                 Matters
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
               The impact of strategic digital marketing on your business success
             </p>
           </div>
@@ -303,10 +379,16 @@ function DigitalMarketing() {
                 <div className="text-yellow-500 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-xl font-bold text-blue-950 mb-3"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-600 leading-relaxed"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   {benefit.description}
                 </p>
               </div>
@@ -323,7 +405,7 @@ function DigitalMarketing() {
             <div className="relative order-2 lg:order-1">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-3xl transform -rotate-3" />
               <img
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format&fit=crop"
+                src="/digital-marketing.png"
                 alt="Marketing Team"
                 className="relative rounded-3xl shadow-2xl w-full h-full object-cover"
               />
@@ -340,9 +422,13 @@ function DigitalMarketing() {
                   Our Agency?
                 </span>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-                We don't just run campaigns—we build long-term strategies that deliver sustainable 
-                growth. Our data-driven approach ensures every marketing dollar works harder for your business.
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              >
+                We don't just run campaigns—we build long-term strategies that
+                deliver sustainable growth. Our data-driven approach ensures
+                every marketing dollar works harder for your business.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {whyChooseUs.map((reason, index) => (
@@ -350,7 +436,12 @@ function DigitalMarketing() {
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle className="w-4 h-4 text-blue-950" />
                     </div>
-                    <span className="text-gray-700 font-medium" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>{reason}</span>
+                    <span
+                      className="text-gray-700 font-medium"
+                      style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                    >
+                      {reason}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -372,7 +463,10 @@ function DigitalMarketing() {
                 We Serve
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
               Proven expertise across diverse industries and markets
             </p>
           </div>
@@ -383,7 +477,10 @@ function DigitalMarketing() {
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group"
               >
-                <h3 className="text-lg font-bold text-blue-950 group-hover:text-yellow-500 transition-colors" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-lg font-bold text-blue-950 group-hover:text-yellow-500 transition-colors"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   {industry}
                 </h3>
               </div>
@@ -398,7 +495,7 @@ function DigitalMarketing() {
           <div className="absolute w-96 h-96 bg-yellow-300 rounded-full blur-3xl top-0 left-0" />
           <div className="absolute w-96 h-96 bg-blue-300 rounded-full blur-3xl bottom-0 right-0" />
         </div>
-        
+
         <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
           <h2
             className="text-4xl sm:text-5xl font-bold text-white mb-6"
@@ -406,26 +503,22 @@ function DigitalMarketing() {
           >
             Ready to Grow Your Business?
           </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-            Let's create a digital marketing strategy that delivers real results. 
-            Get started with a free consultation and see how we can transform your online presence.
+          <p
+            className="text-xl text-white/90 mb-8 leading-relaxed"
+            style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+          >
+            Let's create a digital marketing strategy that delivers real
+            results. Get started with a free consultation and see how we can
+            transform your online presence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="group relative px-8 py-4 bg-white text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-            >
-              <span className="relative z-10 flex items-center gap-2 justify-center">
-                Get Free Audit
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </button>
-            <button
-              className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105 text-lg"
+            <Link
+              to="/contact"
+              className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105 text-lg inline-block"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </section>

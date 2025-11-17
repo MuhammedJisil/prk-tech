@@ -9,6 +9,7 @@ import {
   Zap,
 } from "lucide-react";
 import { Title, Meta } from "react-head";
+import { Link } from "react-router-dom";
 
 function Home() {
   const services = [
@@ -69,7 +70,7 @@ function Home() {
         {/* Background Image with Low Opacity */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+            src="/home.png"
             alt="Technology Background"
             className="w-full h-full object-cover opacity-30"
           />
@@ -135,7 +136,8 @@ function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-              <button
+              <Link
+                to="/contact"
                 className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base"
                 style={{ fontFamily: "Stack Sans Text, sans-serif" }}
               >
@@ -144,14 +146,15 @@ function Home() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
+              </Link>
 
-              <button
+              <Link
+                to="/about"
                 className="px-7 py-3 bg-white border-2 border-blue-950 text-blue-950 font-bold rounded-full hover:bg-blue-950 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
                 style={{ fontFamily: "Stack Sans Text, sans-serif" }}
               >
                 About Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -171,7 +174,10 @@ function Home() {
                 Services
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
               Comprehensive digital solutions tailored to elevate your business
               and drive meaningful results
             </p>
@@ -198,15 +204,24 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-2xl font-bold text-blue-950 mb-4"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   Creative Communications
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-700 leading-relaxed mb-4"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   Strategic brand messaging and creative content that resonates
                   with your audience. We craft compelling narratives across all
                   platforms.
                 </p>
-                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <ul
+                  className="space-y-2 text-gray-600"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-500 mt-1">✓</span>
                     <span>Brand Strategy & Identity</span>
@@ -242,15 +257,24 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-2xl font-bold text-blue-950 mb-4"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   Web Solutions
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-700 leading-relaxed mb-4"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   Modern, responsive websites designed for optimal user
                   experience and business growth. Built with the latest
                   technologies.
                 </p>
-                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <ul
+                  className="space-y-2 text-gray-600"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   <li className="flex items-start gap-2">
                     <span className="text-blue-900 mt-1">✓</span>
                     <span>Custom Website Design & Development</span>
@@ -286,14 +310,23 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-2xl font-bold text-blue-950 mb-4"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   Digital Marketing
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-700 leading-relaxed mb-4"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   Data-driven marketing strategies that increase visibility,
                   drive traffic, and convert leads into loyal customers.
                 </p>
-                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <ul
+                  className="space-y-2 text-gray-600"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-500 mt-1">✓</span>
                     <span>SEO & Search Marketing</span>
@@ -329,14 +362,23 @@ function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-950 mb-4" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-2xl font-bold text-blue-950 mb-4"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   Software Development
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-700 leading-relaxed mb-4"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   Custom software solutions that streamline operations and solve
                   complex business challenges with scalable technology.
                 </p>
-                <ul className="space-y-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <ul
+                  className="space-y-2 text-gray-600"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   <li className="flex items-start gap-2">
                     <span className="text-blue-900 mt-1">✓</span>
                     <span>Custom Application Development</span>
@@ -370,7 +412,10 @@ function Home() {
                 With Us?
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
               Looking for a powerful digital presence? We've empowered thousands
               of businesses since 2012 with proven web design, development, and
               digital marketing solutions. Let's accelerate your growth
@@ -388,10 +433,16 @@ function Home() {
                 <div className="text-yellow-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-xl font-bold text-blue-950 mb-3"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-600 leading-relaxed"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   {item.description}
                 </p>
               </div>
@@ -400,8 +451,9 @@ function Home() {
 
           {/* CTA at the bottom of section */}
           <div className="text-center mt-16">
-            <button
-              className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-lg"
+            <Link
+              to="/contact"
+              className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-lg inline-block"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -409,7 +461,7 @@ function Home() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
+            </Link>
           </div>
         </div>
       </section>

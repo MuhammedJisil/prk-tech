@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Title, Meta } from "react-head";
 import {
   Palette,
   Layout,
@@ -12,6 +13,7 @@ import {
   Target,
   Award,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function CreativeCommunications() {
   const services = [
@@ -23,97 +25,157 @@ function CreativeCommunications() {
     "Branding & Strategy",
     "React js Development",
     "Vue js Development",
-    "Website Revamp Services"
+    "Website Revamp Services",
   ];
 
   const offerings = [
     {
       icon: <Palette className="w-12 h-12" />,
       title: "Graphic Design",
-      description: "Eye-catching visuals that communicate your brand message effectively across all mediums.",
-      features: ["Logo Design", "Brand Identity", "Marketing Collateral", "Social Media Graphics"]
+      description:
+        "Eye-catching visuals that communicate your brand message effectively across all mediums.",
+      features: [
+        "Logo Design",
+        "Brand Identity",
+        "Marketing Collateral",
+        "Social Media Graphics",
+      ],
     },
     {
       icon: <Layout className="w-12 h-12" />,
       title: "Landing Page Design",
-      description: "High-converting landing pages optimized to capture leads and drive action.",
-      features: ["Conversion-Focused", "A/B Testing Ready", "Mobile Optimized", "Fast Loading"]
+      description:
+        "High-converting landing pages optimized to capture leads and drive action.",
+      features: [
+        "Conversion-Focused",
+        "A/B Testing Ready",
+        "Mobile Optimized",
+        "Fast Loading",
+      ],
     },
     {
       icon: <Smartphone className="w-12 h-12" />,
       title: "Responsive Web Design",
-      description: "Beautiful websites that adapt seamlessly to any device or screen size.",
-      features: ["Mobile-First", "Cross-Browser Compatible", "Touch-Friendly", "Performance Optimized"]
+      description:
+        "Beautiful websites that adapt seamlessly to any device or screen size.",
+      features: [
+        "Mobile-First",
+        "Cross-Browser Compatible",
+        "Touch-Friendly",
+        "Performance Optimized",
+      ],
     },
     {
       icon: <Users className="w-12 h-12" />,
       title: "UI-UX Design",
-      description: "User-centered design that creates intuitive and delightful digital experiences.",
-      features: ["User Research", "Wireframing", "Prototyping", "Usability Testing"]
+      description:
+        "User-centered design that creates intuitive and delightful digital experiences.",
+      features: [
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Usability Testing",
+      ],
     },
     {
       icon: <TrendingUp className="w-12 h-12" />,
       title: "Website Redesign",
-      description: "Transform your outdated website into a modern, high-performing digital asset.",
-      features: ["Modern Aesthetics", "Improved Performance", "Enhanced UX", "SEO Optimization"]
+      description:
+        "Transform your outdated website into a modern, high-performing digital asset.",
+      features: [
+        "Modern Aesthetics",
+        "Improved Performance",
+        "Enhanced UX",
+        "SEO Optimization",
+      ],
     },
     {
       icon: <Target className="w-12 h-12" />,
       title: "Branding & Strategy",
-      description: "Comprehensive brand development that sets you apart from the competition.",
-      features: ["Brand Positioning", "Visual Identity", "Brand Guidelines", "Market Strategy"]
+      description:
+        "Comprehensive brand development that sets you apart from the competition.",
+      features: [
+        "Brand Positioning",
+        "Visual Identity",
+        "Brand Guidelines",
+        "Market Strategy",
+      ],
     },
     {
       icon: <Zap className="w-12 h-12" />,
       title: "React.js Development",
-      description: "Powerful, scalable web applications built with React for exceptional performance.",
-      features: ["Component-Based", "Fast & Efficient", "SEO-Friendly", "Maintainable Code"]
+      description:
+        "Powerful, scalable web applications built with React for exceptional performance.",
+      features: [
+        "Component-Based",
+        "Fast & Efficient",
+        "SEO-Friendly",
+        "Maintainable Code",
+      ],
     },
     {
       icon: <Lightbulb className="w-12 h-12" />,
       title: "Vue.js Development",
-      description: "Progressive web applications with Vue.js for smooth, reactive user experiences.",
-      features: ["Lightweight", "Easy Integration", "Flexible Architecture", "Great Performance"]
+      description:
+        "Progressive web applications with Vue.js for smooth, reactive user experiences.",
+      features: [
+        "Lightweight",
+        "Easy Integration",
+        "Flexible Architecture",
+        "Great Performance",
+      ],
     },
     {
       icon: <Award className="w-12 h-12" />,
       title: "Website Revamp Services",
-      description: "Complete website transformation to align with current trends and technologies.",
-      features: ["Content Migration", "Design Refresh", "Tech Stack Update", "Performance Boost"]
-    }
+      description:
+        "Complete website transformation to align with current trends and technologies.",
+      features: [
+        "Content Migration",
+        "Design Refresh",
+        "Tech Stack Update",
+        "Performance Boost",
+      ],
+    },
   ];
 
   const process = [
     {
       number: "01",
       title: "Discovery",
-      description: "We start by understanding your business, goals, target audience, and competitive landscape."
+      description:
+        "We start by understanding your business, goals, target audience, and competitive landscape.",
     },
     {
       number: "02",
       title: "Strategy",
-      description: "We develop a comprehensive creative strategy aligned with your brand vision and objectives."
+      description:
+        "We develop a comprehensive creative strategy aligned with your brand vision and objectives.",
     },
     {
       number: "03",
       title: "Design",
-      description: "Our designers craft stunning visuals and experiences that resonate with your audience."
+      description:
+        "Our designers craft stunning visuals and experiences that resonate with your audience.",
     },
     {
       number: "04",
       title: "Development",
-      description: "We bring designs to life with clean, efficient code and cutting-edge technologies."
+      description:
+        "We bring designs to life with clean, efficient code and cutting-edge technologies.",
     },
     {
       number: "05",
       title: "Testing",
-      description: "Rigorous testing ensures everything works flawlessly across all devices and browsers."
+      description:
+        "Rigorous testing ensures everything works flawlessly across all devices and browsers.",
     },
     {
       number: "06",
       title: "Launch & Support",
-      description: "We deploy your project and provide ongoing support to ensure continued success."
-    }
+      description:
+        "We deploy your project and provide ongoing support to ensure continued success.",
+    },
   ];
 
   const benefits = [
@@ -122,17 +184,23 @@ function CreativeCommunications() {
     "Higher Conversion Rates",
     "Competitive Advantage",
     "Scalable Solutions",
-    "Future-Proof Technology"
+    "Future-Proof Technology",
   ];
 
   return (
     <div className="w-full overflow-x-hidden">
+      <Title>Creative Communication | PRK TECH</Title>
+      <Meta
+        name="description"
+        content="Enhance your brand identity with PRK TECH’s creative communication solutions—crafting impactful messages, visuals, and strategies."
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image with Low Opacity */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064&auto=format&fit=crop"
+            src="/creative-communication-hero.png"
             alt="Creative Design"
             className="w-full h-full object-cover opacity-30"
           />
@@ -168,9 +236,7 @@ function CreativeCommunications() {
               className="flex flex-wrap items-center gap-2 text-xl sm:text-2xl lg:text-3xl font-bold"
               style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
-              <span className="text-white drop-shadow-lg">
-                Expert in
-              </span>
+              <span className="text-white drop-shadow-lg">Expert in</span>
               <div className="relative h-10 sm:h-12 lg:h-14 overflow-hidden min-w-[320px]">
                 <div className="animate-slide-up">
                   {services.map((service, index) => (
@@ -191,29 +257,25 @@ function CreativeCommunications() {
               className="max-w-2xl text-base sm:text-lg text-white leading-relaxed font-medium drop-shadow-md"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
-              From stunning visual designs to powerful web development, we create digital experiences 
-              that tell your story, engage your audience, and drive measurable results.
+              From stunning visual designs to powerful web development, we
+              create digital experiences that tell your story, engage your
+              audience, and drive measurable results.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-              <button
-                className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base"
+              <Link
+                to="/contact"
+                className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base inline-block"
                 style={{ fontFamily: "Stack Sans Text, sans-serif" }}
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Start Your Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
 
-              <button
-                className="px-7 py-3 bg-white border-2 border-blue-950 text-blue-950 font-bold rounded-full hover:bg-blue-950 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
-                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-              >
-                View Portfolio
-              </button>
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Link>
             </div>
           </div>
         </div>
@@ -233,8 +295,12 @@ function CreativeCommunications() {
                 Services
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-              Comprehensive creative and technical solutions tailored to your brand's unique needs
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
+              Comprehensive creative and technical solutions tailored to your
+              brand's unique needs
             </p>
           </div>
 
@@ -250,15 +316,25 @@ function CreativeCommunications() {
                   <div className="text-yellow-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                  <h3
+                    className="text-xl font-bold text-blue-950 mb-3"
+                    style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                  >
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                  <p
+                    className="text-gray-700 leading-relaxed mb-4"
+                    style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                  >
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-gray-600"
+                        style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                      >
                         <CheckCircle className="w-4 h-4 text-yellow-500 mt-1 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </li>
@@ -284,8 +360,12 @@ function CreativeCommunications() {
                 Process
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-              A proven methodology that ensures successful project delivery every time
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
+              A proven methodology that ensures successful project delivery
+              every time
             </p>
           </div>
 
@@ -301,10 +381,16 @@ function CreativeCommunications() {
                 >
                   {step.number}
                 </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-xl font-bold text-blue-950 mb-3"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-600 leading-relaxed"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   {step.description}
                 </p>
               </div>
@@ -328,10 +414,14 @@ function CreativeCommunications() {
                   Our Services?
                 </span>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-                Our creative communication services are designed to elevate your brand and 
-                deliver tangible results. We combine artistic excellence with technical expertise 
-                to create solutions that truly make a difference.
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              >
+                Our creative communication services are designed to elevate your
+                brand and deliver tangible results. We combine artistic
+                excellence with technical expertise to create solutions that
+                truly make a difference.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
@@ -339,7 +429,12 @@ function CreativeCommunications() {
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle className="w-4 h-4 text-blue-950" />
                     </div>
-                    <span className="text-gray-700 font-medium" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>{benefit}</span>
+                    <span
+                      className="text-gray-700 font-medium"
+                      style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                    >
+                      {benefit}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -349,7 +444,7 @@ function CreativeCommunications() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-yellow-600 rounded-3xl transform rotate-3" />
               <img
-                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2036&auto=format&fit=crop"
+                src="/creative-communication.png"
                 alt="Creative Team"
                 className="relative rounded-3xl shadow-2xl w-full h-full object-cover"
               />
@@ -364,7 +459,7 @@ function CreativeCommunications() {
           <div className="absolute w-96 h-96 bg-yellow-300 rounded-full blur-3xl top-0 left-0" />
           <div className="absolute w-96 h-96 bg-blue-300 rounded-full blur-3xl bottom-0 right-0" />
         </div>
-        
+
         <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
           <h2
             className="text-4xl sm:text-5xl font-bold text-white mb-6"
@@ -372,26 +467,21 @@ function CreativeCommunications() {
           >
             Ready to Elevate Your Brand?
           </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-            Let's create something amazing together. Our team is ready to bring 
+          <p
+            className="text-xl text-white/90 mb-8 leading-relaxed"
+            style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+          >
+            Let's create something amazing together. Our team is ready to bring
             your vision to life with creativity, expertise, and passion.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="group relative px-8 py-4 bg-white text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-            >
-              <span className="relative z-10 flex items-center gap-2 justify-center">
-                Get Started Now
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </button>
-            <button
-              className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105 text-lg"
+            <Link
+              to="/contact"
+              className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105 text-lg inline-block"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </section>

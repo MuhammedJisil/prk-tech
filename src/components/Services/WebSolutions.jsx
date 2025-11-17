@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Title, Meta } from "react-head";
 import {
   Globe,
   Code,
@@ -14,8 +15,9 @@ import {
   Monitor,
   Server,
   Shield,
-  TrendingUp
+  TrendingUp,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function WebSolutions() {
   const services = [
@@ -27,98 +29,156 @@ function WebSolutions() {
     "Django Web Development",
     "Mobile Apps Development",
     "Python Development",
-    "Website Maintenance Service"
+    "Website Maintenance Service",
   ];
 
   const offerings = [
     {
       icon: <Monitor className="w-12 h-12" />,
       title: "Website Design",
-      description: "Stunning, user-friendly website designs that reflect your brand identity and engage visitors.",
-      features: ["Custom Design", "Responsive Layout", "Brand Integration", "Modern UI/UX"]
+      description:
+        "Stunning, user-friendly website designs that reflect your brand identity and engage visitors.",
+      features: [
+        "Custom Design",
+        "Responsive Layout",
+        "Brand Integration",
+        "Modern UI/UX",
+      ],
     },
     {
       icon: <Code className="w-12 h-12" />,
       title: "Website Development",
-      description: "Professional website development using cutting-edge technologies for optimal performance.",
-      features: ["Clean Code", "SEO Optimized", "Fast Loading", "Cross-Browser Compatible"]
+      description:
+        "Professional website development using cutting-edge technologies for optimal performance.",
+      features: [
+        "Clean Code",
+        "SEO Optimized",
+        "Fast Loading",
+        "Cross-Browser Compatible",
+      ],
     },
     {
       icon: <ShoppingCart className="w-12 h-12" />,
       title: "E-commerce Development",
-      description: "Full-featured online stores with secure payment gateways and inventory management.",
-      features: ["Payment Integration", "Shopping Cart", "Order Management", "Product Catalog"]
+      description:
+        "Full-featured online stores with secure payment gateways and inventory management.",
+      features: [
+        "Payment Integration",
+        "Shopping Cart",
+        "Order Management",
+        "Product Catalog",
+      ],
     },
     {
       icon: <Layers className="w-12 h-12" />,
       title: "Web Application Development",
-      description: "Custom web applications tailored to your business processes and workflows.",
-      features: ["Scalable Architecture", "API Integration", "Real-time Features", "Cloud-Ready"]
+      description:
+        "Custom web applications tailored to your business processes and workflows.",
+      features: [
+        "Scalable Architecture",
+        "API Integration",
+        "Real-time Features",
+        "Cloud-Ready",
+      ],
     },
     {
       icon: <FileText className="w-12 h-12" />,
       title: "WordPress Development",
-      description: "Powerful WordPress websites with custom themes and plugins for easy content management.",
-      features: ["Custom Themes", "Plugin Development", "WooCommerce", "Easy Updates"]
+      description:
+        "Powerful WordPress websites with custom themes and plugins for easy content management.",
+      features: [
+        "Custom Themes",
+        "Plugin Development",
+        "WooCommerce",
+        "Easy Updates",
+      ],
     },
     {
       icon: <Database className="w-12 h-12" />,
       title: "Django Web Development",
-      description: "Robust, secure web applications built with Django framework for enterprise-level solutions.",
-      features: ["Python-Powered", "Secure by Default", "Admin Panel", "RESTful APIs"]
+      description:
+        "Robust, secure web applications built with Django framework for enterprise-level solutions.",
+      features: [
+        "Python-Powered",
+        "Secure by Default",
+        "Admin Panel",
+        "RESTful APIs",
+      ],
     },
     {
       icon: <Smartphone className="w-12 h-12" />,
       title: "Mobile Apps Development",
-      description: "Native and cross-platform mobile applications for iOS and Android devices.",
-      features: ["Native Performance", "Cross-Platform", "Push Notifications", "Offline Support"]
+      description:
+        "Native and cross-platform mobile applications for iOS and Android devices.",
+      features: [
+        "Native Performance",
+        "Cross-Platform",
+        "Push Notifications",
+        "Offline Support",
+      ],
     },
     {
       icon: <Server className="w-12 h-12" />,
       title: "Python Development",
-      description: "Versatile Python solutions for web backends, data processing, and automation.",
-      features: ["Fast Development", "Scalable Solutions", "Data Processing", "API Development"]
+      description:
+        "Versatile Python solutions for web backends, data processing, and automation.",
+      features: [
+        "Fast Development",
+        "Scalable Solutions",
+        "Data Processing",
+        "API Development",
+      ],
     },
     {
       icon: <Settings className="w-12 h-12" />,
       title: "Website Maintenance Service",
-      description: "Ongoing support and maintenance to keep your website secure, updated, and performing optimally.",
-      features: ["Regular Updates", "Security Monitoring", "Backup Management", "Performance Optimization"]
-    }
+      description:
+        "Ongoing support and maintenance to keep your website secure, updated, and performing optimally.",
+      features: [
+        "Regular Updates",
+        "Security Monitoring",
+        "Backup Management",
+        "Performance Optimization",
+      ],
+    },
   ];
 
   const technologies = [
-    { name: "React", icon: "⚛️" },
-    { name: "Vue.js", icon: "💚" },
-    { name: "WordPress", icon: "📝" },
-    { name: "Django", icon: "🐍" },
-    { name: "Python", icon: "🐍" },
-    { name: "Node.js", icon: "🟢" },
-    { name: "PHP", icon: "🐘" },
-    { name: "MongoDB", icon: "🍃" }
+    { name: "React", category: "Frontend" },
+    { name: "Node.js", category: "Backend" },
+    { name: "Python", category: "Backend" },
+    { name: "PostgreSQL", category: "Database" },
+    { name: "MongoDB", category: "Database" },
+    { name: "AWS", category: "Cloud" },
+    { name: "Docker", category: "DevOps" },
+    { name: "Kubernetes", category: "DevOps" },
   ];
 
   const features = [
     {
       icon: <Shield className="w-10 h-10" />,
       title: "Secure & Reliable",
-      description: "Built with security best practices and reliable infrastructure for peace of mind."
+      description:
+        "Built with security best practices and reliable infrastructure for peace of mind.",
     },
     {
       icon: <Zap className="w-10 h-10" />,
       title: "High Performance",
-      description: "Optimized for speed with fast loading times and smooth user experience."
+      description:
+        "Optimized for speed with fast loading times and smooth user experience.",
     },
     {
       icon: <Globe className="w-10 h-10" />,
       title: "SEO Optimized",
-      description: "Search engine friendly architecture to help you rank higher and get discovered."
+      description:
+        "Search engine friendly architecture to help you rank higher and get discovered.",
     },
     {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Scalable Solutions",
-      description: "Built to grow with your business, handling increased traffic and features."
-    }
+      description:
+        "Built to grow with your business, handling increased traffic and features.",
+    },
   ];
 
   const benefits = [
@@ -127,17 +187,23 @@ function WebSolutions() {
     "Fast & Secure Implementation",
     "Ongoing Support & Maintenance",
     "Cost-Effective Development",
-    "Proven Track Record"
+    "Proven Track Record",
   ];
 
   return (
     <div className="w-full overflow-x-hidden">
+      <Title>Web Solutions | PRK TECH</Title>
+      <Meta
+        name="description"
+        content="PRK TECH provides modern, responsive, and high-performance web solutions tailored to your business needs."
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image with Low Opacity */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+            src="/websolution-hero.png"
             alt="Web Development"
             className="w-full h-full object-cover opacity-30"
           />
@@ -159,9 +225,7 @@ function WebSolutions() {
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
               style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
-              <span className="text-white drop-shadow-lg">
-                Web Solutions
-              </span>
+              <span className="text-white drop-shadow-lg">Web Solutions</span>
               <br />
               <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg">
                 That Drive Results
@@ -173,9 +237,7 @@ function WebSolutions() {
               className="flex flex-wrap items-center gap-2 text-xl sm:text-2xl lg:text-3xl font-bold"
               style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
-              <span className="text-white drop-shadow-lg">
-                Specializing in
-              </span>
+              <span className="text-white drop-shadow-lg">Specializing in</span>
               <div className="relative h-10 sm:h-12 lg:h-14 overflow-hidden min-w-[350px]">
                 <div className="animate-slide-up">
                   {services.map((service, index) => (
@@ -196,29 +258,25 @@ function WebSolutions() {
               className="max-w-2xl text-base sm:text-lg text-white leading-relaxed font-medium drop-shadow-md"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
-              From elegant website design to powerful web applications, we deliver comprehensive 
-              web solutions that combine stunning aesthetics with robust functionality.
+              From elegant website design to powerful web applications, we
+              deliver comprehensive web solutions that combine stunning
+              aesthetics with robust functionality.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-              <button
-                className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base"
+              <Link
+                to="/contact"
+                className="group relative px-7 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/40 text-base inline-block"
                 style={{ fontFamily: "Stack Sans Text, sans-serif" }}
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Start Your Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
 
-              <button
-                className="px-7 py-3 bg-white border-2 border-blue-950 text-blue-950 font-bold rounded-full hover:bg-blue-950 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
-                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-              >
-                View Portfolio
-              </button>
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Link>
             </div>
           </div>
         </div>
@@ -238,7 +296,10 @@ function WebSolutions() {
                 Services
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
               End-to-end web solutions designed to elevate your online presence
             </p>
           </div>
@@ -255,15 +316,25 @@ function WebSolutions() {
                   <div className="text-blue-900 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                  <h3
+                    className="text-xl font-bold text-blue-950 mb-3"
+                    style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                  >
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                  <p
+                    className="text-gray-700 leading-relaxed mb-4"
+                    style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                  >
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-gray-600" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-gray-600"
+                        style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                      >
                         <CheckCircle className="w-4 h-4 text-blue-900 mt-1 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </li>
@@ -289,8 +360,12 @@ function WebSolutions() {
                 We Use
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-              We leverage the latest and most reliable technologies to build your web solutions
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
+              We leverage the latest and most reliable technologies to build
+              your web solutions
             </p>
           </div>
 
@@ -298,14 +373,22 @@ function WebSolutions() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
               >
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {tech.icon}
+                <div className="text-center">
+                  <h3
+                    className="text-lg font-bold text-blue-950 mb-2 group-hover:text-yellow-500 transition-colors"
+                    style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                  >
+                    {tech.name}
+                  </h3>
+                  <span
+                    className="text-sm text-gray-600"
+                    style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                  >
+                    {tech.category}
+                  </span>
                 </div>
-                <h3 className="text-lg font-bold text-blue-950" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
-                  {tech.name}
-                </h3>
               </div>
             ))}
           </div>
@@ -329,17 +412,20 @@ function WebSolutions() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="text-center group"
-              >
+              <div key={index} className="text-center group">
                 <div className="text-yellow-500 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-xl font-bold text-blue-950 mb-3"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-600 leading-relaxed"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   {feature.description}
                 </p>
               </div>
@@ -360,7 +446,12 @@ function WebSolutions() {
                   <div className="w-6 h-6 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-blue-950" />
                   </div>
-                  <span className="text-gray-700 font-medium" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>{benefit}</span>
+                  <span
+                    className="text-gray-700 font-medium"
+                    style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                  >
+                    {benefit}
+                  </span>
                 </div>
               ))}
             </div>
@@ -374,7 +465,7 @@ function WebSolutions() {
           <div className="absolute w-96 h-96 bg-yellow-300 rounded-full blur-3xl top-0 left-0" />
           <div className="absolute w-96 h-96 bg-blue-300 rounded-full blur-3xl bottom-0 right-0" />
         </div>
-        
+
         <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
           <h2
             className="text-4xl sm:text-5xl font-bold text-white mb-6"
@@ -382,26 +473,21 @@ function WebSolutions() {
           >
             Ready to Build Your Web Presence?
           </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-            Let's turn your vision into a powerful web solution. Our expert team is 
-            ready to deliver results that exceed your expectations.
+          <p
+            className="text-xl text-white/90 mb-8 leading-relaxed"
+            style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+          >
+            Let's turn your vision into a powerful web solution. Our expert team
+            is ready to deliver results that exceed your expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="group relative px-8 py-4 bg-white text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg"
+            <Link
+              to="/contact"
+              className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105 text-lg inline-block"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
-              <span className="relative z-10 flex items-center gap-2 justify-center">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </button>
-            <button
-              className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105 text-lg"
-              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
-            >
-              Request Quote
-            </button>
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>

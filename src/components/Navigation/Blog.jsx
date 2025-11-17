@@ -730,51 +730,6 @@ function Blog() {
               }}
             />
 
-            {/* Share Section */}
-            <div className="mt-16 pt-8 border-t border-gray-200">
-              <h3 className="text-2xl font-bold text-blue-900 mb-6">Share this article</h3>
-              <div className="flex gap-4">
-                <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  Share on LinkedIn
-                </button>
-                <button className="px-6 py-3 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors">
-                  Share on Twitter
-                </button>
-                <button className="px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition-colors">
-                  Share on Facebook
-                </button>
-              </div>
-            </div>
-
-            {/* Related Posts */}
-            <div className="mt-16 pt-8 border-t border-gray-200">
-              <h3 className="text-2xl font-bold text-blue-900 mb-8">Related Articles</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                {blogPosts
-                  .filter(post => post.id !== selectedBlog.id && post.category === selectedBlog.category)
-                  .slice(0, 2)
-                  .map(post => (
-                    <div
-                      key={post.id}
-                      onClick={() => setSelectedBlog(post)}
-                      className="group cursor-pointer"
-                    >
-                      <div className="relative h-48 rounded-xl overflow-hidden mb-4">
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      </div>
-                      <h4 className="text-xl font-bold text-blue-900 group-hover:text-orange-500 transition-colors mb-2">
-                        {post.title}
-                      </h4>
-                      <p className="text-gray-600 line-clamp-2">{post.excerpt}</p>
-                    </div>
-                  ))}
-              </div>
-            </div>
           </div>
         </article>
 
@@ -858,7 +813,7 @@ function Blog() {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <Title>Our Blog | Creative Communications</Title>
+      <Title>Our Blog | PRK TECH</Title>
       <Meta name="description" content="Stay updated with the latest trends in web design, development, SEO, and digital marketing." />
       
       {/* Hero Section */}
@@ -893,19 +848,7 @@ function Blog() {
               development, SEO, and digital marketing
             </p>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mt-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-orange-400 transition-all"
-                />
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
@@ -999,39 +942,7 @@ function Blog() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-orange-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute w-96 h-96 bg-orange-300 rounded-full blur-3xl top-0 left-0" />
-          <div className="absolute w-96 h-96 bg-blue-300 rounded-full blur-3xl bottom-0 right-0" />
-        </div>
-        
-        <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
-          <h2
-            className="text-4xl sm:text-5xl font-bold text-white mb-6"
-            style={{ fontFamily: "Sigmar One, sans-serif" }}
-          >
-            Want to Stay Updated?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Subscribe to our newsletter and get the latest insights delivered to your inbox
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-            />
-            <button
-              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full hover:scale-105 transition-all duration-300 hover:shadow-2xl"
-              style={{ fontFamily: "Sigmar One, sans-serif" }}
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
-
+      
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Open+Sans:wght@400;500;600;700&display=swap');
 

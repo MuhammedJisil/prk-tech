@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Title, Meta } from "react-head";
 import {
   Target,
   TrendingUp,
@@ -9,81 +10,98 @@ import {
   Heart,
   Lightbulb,
   Shield,
-  Rocket
+  Rocket,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   const stats = [
     { number: "2012", label: "Founded" },
     { number: "1000+", label: "Projects Delivered" },
     { number: "500+", label: "Happy Clients" },
-    { number: "50+", label: "Team Members" }
+    { number: "50+", label: "Team Members" },
   ];
 
   const values = [
     {
       icon: <Heart className="w-10 h-10" />,
       title: "Client-Centric",
-      description: "Your success is our success. We prioritize understanding your needs and delivering solutions that exceed expectations."
+      description:
+        "Your success is our success. We prioritize understanding your needs and delivering solutions that exceed expectations.",
     },
     {
       icon: <Lightbulb className="w-10 h-10" />,
       title: "Innovation",
-      description: "We stay ahead of the curve, embracing new technologies and creative approaches to solve complex challenges."
+      description:
+        "We stay ahead of the curve, embracing new technologies and creative approaches to solve complex challenges.",
     },
     {
       icon: <Shield className="w-10 h-10" />,
       title: "Integrity",
-      description: "Transparency, honesty, and ethical practices form the foundation of every relationship we build."
+      description:
+        "Transparency, honesty, and ethical practices form the foundation of every relationship we build.",
     },
     {
       icon: <Rocket className="w-10 h-10" />,
       title: "Excellence",
-      description: "We're committed to delivering high-quality work that drives real results and stands the test of time."
-    }
+      description:
+        "We're committed to delivering high-quality work that drives real results and stands the test of time.",
+    },
   ];
 
   const expertise = [
     {
       icon: <Award className="w-12 h-12" />,
       title: "Proven Track Record",
-      description: "Over a decade of delivering exceptional digital solutions across diverse industries and markets."
+      description:
+        "Over a decade of delivering exceptional digital solutions across diverse industries and markets.",
     },
     {
       icon: <TrendingUp className="w-12 h-12" />,
       title: "Results-Driven",
-      description: "We focus on measurable outcomes that directly impact your bottom line and business growth."
+      description:
+        "We focus on measurable outcomes that directly impact your bottom line and business growth.",
     },
     {
       icon: <Users className="w-12 h-12" />,
       title: "Expert Team",
-      description: "Our talented professionals bring years of experience and passion to every project."
+      description:
+        "Our talented professionals bring years of experience and passion to every project.",
     },
     {
       icon: <Target className="w-12 h-12" />,
       title: "Strategic Approach",
-      description: "We combine creativity with data-driven insights to develop strategies that work."
+      description:
+        "We combine creativity with data-driven insights to develop strategies that work.",
     },
     {
       icon: <Globe className="w-12 h-12" />,
       title: "Global Perspective",
-      description: "Working with clients worldwide has given us insights into diverse markets and cultures."
+      description:
+        "Working with clients worldwide has given us insights into diverse markets and cultures.",
     },
     {
       icon: <Zap className="w-12 h-12" />,
       title: "Cutting-Edge Solutions",
-      description: "We leverage the latest technologies to build scalable, future-proof digital solutions."
-    }
+      description:
+        "We leverage the latest technologies to build scalable, future-proof digital solutions.",
+    },
   ];
 
   return (
     <div className="w-full overflow-x-hidden">
+      <Title>About Us | PRK TECH</Title>
+      <Meta
+        name="description"
+        content="Discover PRK TECH—our mission, vision, values, and the team dedicated to delivering innovative digital solutions."
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+            src="/group-image.png"
             alt="Team Collaboration"
             className="w-full h-full object-cover opacity-30"
           />
@@ -105,7 +123,9 @@ function AboutUs() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
               style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
             >
-              <span className="text-white drop-shadow-lg">Empowering Businesses</span>
+              <span className="text-white drop-shadow-lg">
+                Empowering Businesses
+              </span>
               <br />
               <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg">
                 Since 2012
@@ -117,9 +137,10 @@ function AboutUs() {
               className="max-w-3xl mx-auto text-lg sm:text-xl text-white leading-relaxed font-medium drop-shadow-md"
               style={{ fontFamily: "Stack Sans Text, sans-serif" }}
             >
-              We're more than a digital agency—we're your strategic partner in growth. 
-              For over a decade, we've been helping businesses transform their vision into 
-              digital reality through innovative solutions and unwavering commitment to excellence.
+              We're more than a digital agency—we're your strategic partner in
+              growth. For over a decade, we've been helping businesses transform
+              their vision into digital reality through innovative solutions and
+              unwavering commitment to excellence.
             </p>
           </div>
         </div>
@@ -140,21 +161,33 @@ function AboutUs() {
                   Story
                 </span>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-                Founded in 2012, PRK began with a simple mission: to help businesses harness 
-                the power of digital technology to achieve their goals. What started as a small 
-                team of passionate innovators has grown into a full-service digital agency 
-                serving clients across the globe.
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              >
+                Founded in 2012, PRK began with a simple mission: to help
+                businesses harness the power of digital technology to achieve
+                their goals. What started as a small team of passionate
+                innovators has grown into a full-service digital agency serving
+                clients across the globe.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-                Over the years, we've evolved alongside the digital landscape, continuously 
-                adapting our services and expertise to meet the changing needs of our clients. 
-                Through it all, our commitment to delivering exceptional results has remained constant.
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              >
+                Over the years, we've evolved alongside the digital landscape,
+                continuously adapting our services and expertise to meet the
+                changing needs of our clients. Through it all, our commitment to
+                delivering exceptional results has remained constant.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-                Today, we're proud to have partnered with hundreds of businesses, from startups 
-                to established enterprises, helping them build their digital presence and achieve 
-                measurable growth. Our success is measured by the success of our clients.
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+              >
+                Today, we're proud to have partnered with hundreds of
+                businesses, from startups to established enterprises, helping
+                them build their digital presence and achieve measurable growth.
+                Our success is measured by the success of our clients.
               </p>
             </div>
 
@@ -162,7 +195,7 @@ function AboutUs() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-3xl transform rotate-3" />
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+                src="/AboutUs.png"
                 alt="Our Team"
                 className="relative rounded-3xl shadow-2xl w-full h-full object-cover"
               />
@@ -184,7 +217,10 @@ function AboutUs() {
                 Values
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
               The principles that guide everything we do
             </p>
           </div>
@@ -198,10 +234,16 @@ function AboutUs() {
                 <div className="text-yellow-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                <h3
+                  className="text-xl font-bold text-blue-950 mb-3"
+                  style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                >
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                <p
+                  className="text-gray-600 leading-relaxed"
+                  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                >
                   {value.description}
                 </p>
               </div>
@@ -223,8 +265,12 @@ function AboutUs() {
                 Us Different
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-              Our unique combination of experience, expertise, and dedication sets us apart
+            <p
+              className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+            >
+              Our unique combination of experience, expertise, and dedication
+              sets us apart
             </p>
           </div>
 
@@ -239,10 +285,16 @@ function AboutUs() {
                   <div className="text-yellow-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-blue-950 mb-3" style={{ fontFamily: "Stack Sans Headline, sans-serif" }}>
+                  <h3
+                    className="text-xl font-bold text-blue-950 mb-3"
+                    style={{ fontFamily: "Stack Sans Headline, sans-serif" }}
+                  >
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
+                  <p
+                    className="text-gray-600 leading-relaxed"
+                    style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+                  >
                     {item.description}
                   </p>
                 </div>
@@ -258,7 +310,7 @@ function AboutUs() {
           <div className="absolute w-96 h-96 bg-yellow-300 rounded-full blur-3xl top-0 left-0" />
           <div className="absolute w-96 h-96 bg-blue-300 rounded-full blur-3xl bottom-0 right-0" />
         </div>
-        
+
         <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
           <h2
             className="text-4xl sm:text-5xl font-bold text-white mb-6"
@@ -266,19 +318,26 @@ function AboutUs() {
           >
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed" style={{ fontFamily: "Stack Sans Text, sans-serif" }}>
-            Let's create something extraordinary together. Partner with us and experience 
-            the difference that dedication, expertise, and innovation can make.
-          </p>
-          <button
-            className="group relative px-8 py-4 bg-white text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg"
+          <p
+            className="text-xl text-white/90 mb-8 leading-relaxed"
             style={{ fontFamily: "Stack Sans Text, sans-serif" }}
           >
-            <span className="relative z-10">Get Started Today</span>
-            <div className="absolute inset-0 bg-yellow-500 text-blue-950 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              Get Started Today
-            </div>
-          </button>
+            Let's create something extraordinary together. Partner with us and
+            experience the difference that dedication, expertise, and innovation
+            can make.
+          </p>
+         <Link
+  to="/contact"
+  className="group relative px-8 py-4 bg-white text-blue-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg inline-block"
+  style={{ fontFamily: "Stack Sans Text, sans-serif" }}
+>
+  <span className="relative z-10">Get Started Today</span>
+
+  <div className="absolute inset-0 bg-yellow-500 text-blue-950 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+    Get Started Today
+  </div>
+</Link>
+
         </div>
       </section>
 
