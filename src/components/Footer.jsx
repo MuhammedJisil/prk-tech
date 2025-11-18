@@ -192,17 +192,6 @@ const Footer = () => {
               <p className="text-gray-400 text-sm text-center md:text-left">
                 © {currentYear} PRK TECH. All rights reserved.
               </p>
-
-              <div className="flex items-center gap-2 text-sm">
-                <span className="text-gray-400">Sited by:</span>
-                <a
-                  href="https://www.acceleratein.org/"
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center gap-1 font-semibold"
-                >
-                  Accelerate
-                  <ExternalLink size={14} />
-                </a>
-              </div>
             </div>
           </div>
         </div>
